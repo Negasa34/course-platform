@@ -1,0 +1,46 @@
+.success-section {
+  padding: 6rem 2rem;
+  background: linear-gradient(180deg, rgba(2, 6, 23, 0.46), rgba(15, 23, 42, 0.7));
+}
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.story-card {
+  padding: 1.75rem;
+  border-radius: 1.2rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(15, 23, 42, 0.78);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 18px 40px rgba(2, 6, 23, 0.24);
+}
+
+.stars {
+  color: #facc15;
+  letter-spacing: 0.12em;
+  margin-bottom: 1rem;
+}
+
+.quote {
+  color: #e2e8f0;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.story-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.story-footer strong {
+  color: white;
+}
+
+.story-footer span {
+  color: var(--text-gray);
+  font-size: 0.9rem;
+}

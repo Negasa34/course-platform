@@ -1,0 +1,234 @@
+/* HERO CONTAINER */
+.hero-container {
+  position: relative;
+  width: 100%;
+  min-height: 85vh;
+  background: transparent !important; /* Fixed background video akka keessaan mul'atuuf */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 2rem 4rem 2rem;
+  text-align: center;
+}
+
+/* NAVBAR (FIXED TOP) */
+.hero-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 3rem;
+  background: rgba(11, 15, 25, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-logo {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  background: linear-gradient(135deg, #c084fc, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #c084fc;
+  text-shadow: 0 0 10px rgba(192, 132, 252, 0.5);
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-signin {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(192, 132, 252, 0.4);
+  color: #f8fafc;
+  padding: 0.6rem 1.4rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-signin:hover {
+  background: rgba(168, 85, 247, 0.2);
+  border-color: #a855f7;
+  transform: translateY(-2px);
+}
+
+.btn-getstarted {
+  background: linear-gradient(135deg, #a855f7, #6366f1);
+  border: none;
+  color: #ffffff;
+  padding: 0.6rem 1.4rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-getstarted:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(168, 85, 247, 0.5);
+}
+
+/* HERO MAIN CONTENT */
+.hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  /* Color Text Gradient */
+  background: linear-gradient(135deg, #ffffff 30%, #c084fc 70%, #818cf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  color: #cbd5e1;
+  max-width: 650px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* SEARCH BAR SECTION */
+.hero-search {
+  display: flex;
+  width: 100%;
+  max-width: 550px;
+  margin-top: 1rem;
+  background: rgba(15, 23, 42, 0.6);
+  padding: 0.4rem;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: border-color 0.3s ease;
+}
+
+.hero-search:focus-within {
+  border-color: #a855f7;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+}
+
+.hero-search input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  color: #ffffff;
+  font-size: 1rem;
+  outline: none;
+}
+
+.hero-search input::placeholder {
+  color: #94a3b8;
+}
+
+.hero-search button {
+  border-radius: 40px;
+  padding: 0.8rem 1.8rem;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .hero-navbar {
+    padding: 1rem 1.5rem;
+  }
+
+  .nav-links {
+    display: none; /* Mobile menu baddee yoo barbaadde drop-down godhuu danda'ta */
+  }
+
+  .hero-content h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-search {
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    gap: 0.8rem;
+  }
+
+  .hero-search input {
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 0.5rem;
+  }
+
+  .hero-search button {
+    border-radius: 0.5rem;
+    width: 100%;
+  }
+}
+/* LOGO CONTAINER IN NAVBAR */
+.nav-logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+.nav-logo-img {
+  height: 45px; /* Safara hamma logo-a */
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
+  transition: transform 0.3s ease;
+}
+
+.nav-logo-wrapper:hover .nav-logo-img {
+  transform: scale(1.05);
+}
+
+.nav-logo-text {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #ffffff, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
